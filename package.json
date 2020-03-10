@@ -13,6 +13,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
     "styled-components": "^5.0.1",
     "typescript": "^3.7.5"
   },
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@types/redux": "^3.6.0",
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.7"
   }
