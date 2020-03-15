@@ -4,9 +4,9 @@ import CustomGlobalStyle from './global'
 
 export default function GlobalStyle() {
   return (
-    <React.Fragment>
+    <>
       <Normalize />
       <CustomGlobalStyle />
-    </React.Fragment>
+    </>
   )
 }

@@ -6,7 +6,11 @@ function prepareUrl(baseUrl: string, ...params: string[]): string {
   return `${baseUrl}?${params.join('&')}`
 }
 
-async function callApi<T>(method: string, url: string, data?: any): Promise<T> {
+async function callApi<T>(
+  method: string,
+  url: string,
+  data?: object | string | number | boolean
+): Promise<T> {
   const res = await fetch(url, {
     method,
     headers: {
