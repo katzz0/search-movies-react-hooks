@@ -2,7 +2,7 @@ import { all, call, fork, put, takeEvery } from 'redux-saga/effects'
 import { searchError, searchSuccess } from './actions'
 import { makeGetRequest } from '../../utils/api'
 import { MoviesActionTypes, SearchMoviesResult } from './types'
-import { AppAction } from '../../utils/appAction';
+import { AppAction } from '../../utils/appAction'
 
 function* handleSearch(action: AppAction) {
   try {
