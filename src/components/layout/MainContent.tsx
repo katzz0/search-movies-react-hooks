@@ -11,6 +11,9 @@ interface Props {
   className?: string
 }
 
-export default function MainContent({ className, children }: PropsWithChildren<Props>) {
+export default function MainContent({
+  className,
+  children
+}: PropsWithChildren<Props>) {
   return <Wrapper className={className}>{children}</Wrapper>
 }
