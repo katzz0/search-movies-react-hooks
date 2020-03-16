@@ -7,6 +7,12 @@ import SearchMoviesResult from '../components/movies/SearchMoviesResult'
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
+  flex-direction: column;
+`
+
+const FullHeightMainContent = styled(MainContent)`
+  flex: 1;
 `
 
 const SearchMoviesFieldWithMargin = styled(SearchMoviesField)`
@@ -21,10 +27,10 @@ export default function App() {
   return (
     <Wrapper>
       <Header appName="Search Movies (with react hooks)" />
-      <MainContent>
+      <FullHeightMainContent>
         <SearchMoviesFieldWithMargin />
         <FullHeightSearchMoviesResult />
-      </MainContent>
+      </FullHeightMainContent>
     </Wrapper>
   )
 }

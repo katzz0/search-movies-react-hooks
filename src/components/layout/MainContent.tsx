@@ -5,9 +5,12 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
 `
 
-export default function MainContent({ children }: PropsWithChildren<{}>) {
-  return <Wrapper>{children}</Wrapper>
+interface Props {
+  className?: string
+}
+
+export default function MainContent({ className, children }: PropsWithChildren<Props>) {
+  return <Wrapper className={className}>{children}</Wrapper>
 }
