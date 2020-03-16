@@ -9,7 +9,6 @@ const Wrapper = styled.header`
   padding: 0.5rem 1.5rem;
   background-color: deepskyblue;
   color: whitesmoke;
-  font-family: 'Roboto', sans-serif;
 `
 
 const HeaderInner = styled.div`
