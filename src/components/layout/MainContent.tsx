@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.main`
   display: flex;
@@ -9,9 +9,5 @@ const Wrapper = styled.main`
 `
 
 export default function MainContent({ children }: PropsWithChildren<{}>) {
-  return (
-    <Wrapper>
-      { children }
-    </Wrapper>
-  );
+  return <Wrapper>{children}</Wrapper>
 }

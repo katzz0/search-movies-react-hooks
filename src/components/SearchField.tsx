@@ -1,9 +1,9 @@
 import React, { FormEvent, useState } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface Props {
-  className?: string;
-  searchRequest: (searchText: string) => void;
+  className?: string
+  searchRequest: (searchText: string) => void
 }
 
 const Form = styled.form`
@@ -14,17 +14,17 @@ const Form = styled.form`
 const Button = styled.button`
   border: 2px solid deepskyblue;
   font-size: 20px;
-  padding: .3em .5em;
-  margin-left: .3em;
+  padding: 0.3em 0.5em;
+  margin-left: 0.3em;
   cursor: pointer;
-  
+
   &:focus {
     outline: none;
   }
-  
+
   &:active {
-  background-color: deepskyblue;
-  color: whitesmoke;
+    background-color: deepskyblue;
+    color: whitesmoke;
   }
 `
 
@@ -33,8 +33,8 @@ const Input = styled.input`
   width: 400px;
   max-width: 50%;
   font-size: 20px;
-  padding: 0 .3em;
-  
+  padding: 0 0.3em;
+
   &:focus {
     outline: none;
   }
@@ -44,8 +44,8 @@ export default function SearchField({ className, searchRequest }: Props) {
   const [searchText, setSearchText] = useState('')
 
   const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    searchRequest(searchText);
+    e.preventDefault()
+    searchRequest(searchText)
   }
 
   return (
@@ -57,5 +57,5 @@ export default function SearchField({ className, searchRequest }: Props) {
       />
       <Button>Search</Button>
     </Form>
-  );
+  )
 }
