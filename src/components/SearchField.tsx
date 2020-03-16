@@ -52,6 +52,7 @@ export default function SearchField({ className, searchRequest }: Props) {
     <Form className={className} onSubmit={handleSubmit}>
       <Input
         type="text"
+        placeholder="Enter Movies or Series name"
         value={searchText}
         onChange={e => setSearchText(e.target.value)}
       />
