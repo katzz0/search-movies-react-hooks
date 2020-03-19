@@ -51,7 +51,7 @@ function MoviesPage({ moviesAreLoading }: Props) {
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
-  moviesAreLoading: state.movies.loading,
+  moviesAreLoading: state.movies.loading
 })
 
 export default connect(mapStateToProps)(MoviesPage)
