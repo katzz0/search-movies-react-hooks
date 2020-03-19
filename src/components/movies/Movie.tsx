@@ -17,12 +17,13 @@ const Poster = styled.div<{ imageSrc: string }>`
   background-size: cover;
 `
 
-const Title = styled.span`
+const Title = styled.div`
   position: absolute;
   text-align: center;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 0.7em 0;
+  bottom: 0;
   color: whitesmoke;
 `
 
