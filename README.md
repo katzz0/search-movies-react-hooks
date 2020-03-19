@@ -11,7 +11,6 @@ allows it add more features and extend it easily.
 The feature set is limited only by searching movie by movie title but a feature set can be extended in the nearest future.
 
 ## Demo
-
 The [demo](http://mpalenov.github.io/search-movies-react-hooks) is deployed on github pages. If you want to run it locally
 you need to do the following steps:
 
@@ -26,6 +25,11 @@ you need to do the following steps:
 - Execute `npm install` to install app dependencies
 - Execute `npm start`
 - Browser's page will be opened automatically or you can visit `http://localhost:3000` to view this app
+
+## API key
+To access OMDB API you need an API key before you run Dev Server or build the application. You can get it at the
+official [web site](http://www.omdbapi.com/). To set that key set an environment variable, for example you can do that
+in Bash like that `export REACT_APP_API_KEY="{YOUR_KEY}"`.
 
 ## License
 OMDB React client is licensed under the MIT License - see the LICENSE file for details
