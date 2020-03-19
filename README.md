@@ -11,7 +11,7 @@ allows it add more features and extend it easily.
 The feature set is limited only by searching movie by movie title but a feature set can be extended in the nearest future.
 
 ## Demo
-The [demo](http://mpalenov.github.io/search-movies-react-hooks) is deployed on github pages. If you want to run it locally
+The [demo](https://mpalenov.github.io/search-movies-react-hooks) is deployed on github pages. If you want to run it locally
 you need to do the following steps:
 
 - Clone this repository

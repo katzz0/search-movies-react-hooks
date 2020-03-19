@@ -1,5 +1,5 @@
 const API_ENDPOINT =
-  process.env.REACT_APP_API_ENDPOINT || 'http://www.omdbapi.com/'
+  process.env.REACT_APP_API_ENDPOINT || 'https://www.omdbapi.com/'
 const API_KEY = process.env.REACT_APP_API_KEY
 
 function prepareUrl(baseUrl: string, ...params: string[]): string {
