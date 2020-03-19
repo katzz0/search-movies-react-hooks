@@ -13,7 +13,7 @@ const reducer: Reducer<MoviesState> = (state = initialState, action) => {
       return { ...state, loading: true }
     }
     case MoviesActionTypes.SEARCH_SUCCESS: {
-      return { ...state, loading: false, data: action.payload }
+      return { ...state, loading: false, data: action.payload, error: undefined }
     }
     case MoviesActionTypes.SEARCH_ERROR: {
       return { ...state, loading: false, error: action.payload }
