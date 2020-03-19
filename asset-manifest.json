@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/search-movies-react-hooks/static/js/main.321a6f8a.chunk.js",
-    "main.js.map": "/search-movies-react-hooks/static/js/main.321a6f8a.chunk.js.map",
+    "main.js": "/search-movies-react-hooks/static/js/main.3ead50a7.chunk.js",
+    "main.js.map": "/search-movies-react-hooks/static/js/main.3ead50a7.chunk.js.map",
     "runtime-main.js": "/search-movies-react-hooks/static/js/runtime-main.0a7e0455.js",
     "runtime-main.js.map": "/search-movies-react-hooks/static/js/runtime-main.0a7e0455.js.map",
     "static/js/2.a5100266.chunk.js": "/search-movies-react-hooks/static/js/2.a5100266.chunk.js",
     "static/js/2.a5100266.chunk.js.map": "/search-movies-react-hooks/static/js/2.a5100266.chunk.js.map",
     "index.html": "/search-movies-react-hooks/index.html",
-    "precache-manifest.d92a33b4ac78e266ea606418451779dc.js": "/search-movies-react-hooks/precache-manifest.d92a33b4ac78e266ea606418451779dc.js",
+    "precache-manifest.1eac69f341d2bcfdb5470664b9ee8ce5.js": "/search-movies-react-hooks/precache-manifest.1eac69f341d2bcfdb5470664b9ee8ce5.js",
     "service-worker.js": "/search-movies-react-hooks/service-worker.js",
     "static/js/2.a5100266.chunk.js.LICENSE.txt": "/search-movies-react-hooks/static/js/2.a5100266.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0a7e0455.js",
     "static/js/2.a5100266.chunk.js",
-    "static/js/main.321a6f8a.chunk.js"
+    "static/js/main.3ead50a7.chunk.js"
   ]
 }
