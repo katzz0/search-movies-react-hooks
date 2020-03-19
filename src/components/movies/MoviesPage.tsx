@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import MainContent from '../layout/MainContent'
@@ -38,22 +38,10 @@ const LoaderWrapper = styled.div`
 
 interface Props {
   moviesAreLoading: boolean
+  hasData: boolean
 }
 
-function MoviesPage({ moviesAreLoading }: Props) {
-  const [dataRequestedFirstTime, setDataRequestedFirstTime] = useState(false)
-  const [dataFetchedFirstTime, setDataFetchedFirstTime] = useState(false)
-
-  useEffect(() => {
-    if (!moviesAreLoading && dataRequestedFirstTime) {
-      setDataFetchedFirstTime(true)
-
-      return
-    }
-
-    setDataRequestedFirstTime(true)
-  }, [moviesAreLoading])
-
+function MoviesPage({ moviesAreLoading, hasData }: Props) {
   const loader = (
     <LoaderWrapper>
       <Loader />
@@ -61,7 +49,7 @@ function MoviesPage({ moviesAreLoading }: Props) {
   )
   const movies = (
     <FullHeightSearchMoviesResult
-      occupySpace={dataFetchedFirstTime}
+      occupySpace={hasData}
       transparent={!moviesAreLoading}
     />
   )
@@ -75,7 +63,8 @@ function MoviesPage({ moviesAreLoading }: Props) {
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
-  moviesAreLoading: state.movies.loading
+  moviesAreLoading: state.movies.loading,
+  hasData: !!state.movies.data
 })
 
 export default connect(mapStateToProps)(MoviesPage)

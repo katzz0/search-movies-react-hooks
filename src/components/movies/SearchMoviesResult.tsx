@@ -9,7 +9,7 @@ type MovieModelWithId = MovieModel & { id: string }
 
 interface Props {
   className?: string
-  movies: MovieModelWithId[]
+  movies: MovieModelWithId[] | undefined
   errorMessage?: string
 }
 
@@ -22,11 +22,15 @@ function SearchMoviesResult<T>({ className, movies, errorMessage }: Props) {
     )
   }
 
-  return <MoviesList className={className} movies={movies} />
+  if (movies) {
+    return <MoviesList className={className} movies={movies} />
+  }
+
+  return null
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
-  movies: state.movies.data.map(x => ({ id: x.imdbID, ...x })),
+  movies: state.movies.data?.map(x => ({ id: x.imdbID, ...x })),
   errorMessage: state.movies.error
 })
 
