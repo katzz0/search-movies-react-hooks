@@ -48,8 +48,17 @@ export default function SearchField({
 }: Props) {
   const [searchText, setSearchText] = useState('')
 
+  const isInputValid = () => {
+    return searchText.length > 0
+  }
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+
+    if (!isInputValid()) {
+      return
+    }
+
     searchRequest(searchText)
   }
 
@@ -61,7 +70,7 @@ export default function SearchField({
         value={searchText}
         onChange={e => setSearchText(e.target.value)}
       />
-      <Button>Search</Button>
+      <Button disabled={!isInputValid()}>Search</Button>
     </Form>
   )
 }
