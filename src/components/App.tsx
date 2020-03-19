@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../components/layout/Header'
-import SearchMoviesField from './SearchMoviesField'
-import MainContent from '../components/layout/MainContent'
-import SearchMoviesResult from '../components/movies/SearchMoviesResult'
+import Header from './layout/Header'
+import SearchMoviesField from './movies/SearchMoviesField'
+import MainContent from './layout/MainContent'
+import SearchMoviesResult from './movies/SearchMoviesResult'
 
 const Wrapper = styled.div`
   height: 100%;

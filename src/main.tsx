@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Provider } from 'react-redux'
 import { Store } from 'redux'
 import { ApplicationState } from './store'
-import App from './containers/App'
+import App from './components/App'
 import GlobalStyle from './styles'
 
 interface MainProps {
