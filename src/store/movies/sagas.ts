@@ -20,7 +20,7 @@ function* handleSearch(action: AppAction) {
     if (err instanceof Error && err.stack) {
       yield put(searchError(err.stack))
     } else {
-      yield put(searchError('An unknown error occured.'))
+      yield put(searchError('An unknown error occurred'))
     }
   }
 }
