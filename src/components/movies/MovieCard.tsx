@@ -7,7 +7,5 @@ interface Props {
 }
 
 export default function MovieCard({ item }: Props) {
-  return (
-    <Movie movie={item} />
-  )
+  return <Movie movie={item} />
 }

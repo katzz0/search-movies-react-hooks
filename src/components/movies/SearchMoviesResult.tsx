@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import { Movie as MovieModel } from '../../store/movies/types'
 import { ApplicationState } from '../../store'
 import ErrorMessageWrapper from '../shared/ErrorMessageWrapper'
-import MoviesList from './MoviesList';
+import MoviesList from './MoviesList'
 
 type MovieModelWithId = MovieModel & { id: string }
 
-interface Props{
+interface Props {
   className?: string
   movies: MovieModelWithId[]
   errorMessage?: string

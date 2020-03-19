@@ -1,6 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Movie as MovieModel } from '../../store/movies/types'
-import styled from 'styled-components';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -13,7 +13,7 @@ const Poster = styled.div<{ imageSrc: string }>`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: url(${ ({ imageSrc }) => imageSrc }) no-repeat center top;
+  background: url(${({ imageSrc }) => imageSrc}) no-repeat center top;
   background-size: cover;
 `
 
@@ -34,7 +34,9 @@ export default function Movie({ movie }: Props) {
   return (
     <Wrapper>
       <Poster imageSrc={movie.Poster}>
-        <Title>{movie.Title}, {movie.Year}</Title>
+        <Title>
+          {movie.Title}, {movie.Year}
+        </Title>
       </Poster>
     </Wrapper>
   )
