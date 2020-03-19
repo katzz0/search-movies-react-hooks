@@ -29,7 +29,7 @@ export default function App() {
     <Wrapper>
       <Header appName="Search Movies (with react hooks)" />
       <FullHeightMainContent>
-        <SearchMoviesFieldWithMargin />
+        <SearchMoviesFieldWithMargin placeholder="Enter Movies or Series name" />
         <FullHeightSearchMoviesResult />
       </FullHeightMainContent>
     </Wrapper>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import SearchField from '../components/SearchField'
+import SearchField from '../components/shared/SearchField'
 import { searchRequest as searchMoviesRequest } from '../store/movies/actions'
 
 export const mapDispatchToProps = {

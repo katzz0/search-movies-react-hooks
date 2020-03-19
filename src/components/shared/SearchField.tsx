@@ -1,9 +1,11 @@
 import React, { FormEvent, useState } from 'react'
 import styled from 'styled-components'
+import { placeholder } from '@babel/types';
 
 interface Props {
   className?: string
   searchRequest: (searchText: string) => void
+  placeholder?: string
 }
 
 const Form = styled.form`
@@ -40,7 +42,7 @@ const Input = styled.input`
   }
 `
 
-export default function SearchField({ className, searchRequest }: Props) {
+export default function SearchField({ className, searchRequest, placeholder }: Props) {
   const [searchText, setSearchText] = useState('')
 
   const handleSubmit = (e: FormEvent) => {
@@ -52,7 +54,7 @@ export default function SearchField({ className, searchRequest }: Props) {
     <Form className={className} onSubmit={handleSubmit}>
       <Input
         type="text"
-        placeholder="Enter Movies or Series name"
+        placeholder={placeholder}
         value={searchText}
         onChange={e => setSearchText(e.target.value)}
       />
