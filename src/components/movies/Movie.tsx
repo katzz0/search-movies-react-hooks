@@ -13,7 +13,8 @@ const Poster = styled.div<{ imageSrc: string }>`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: darkslategrey url(${({ imageSrc }) => imageSrc}) no-repeat center top;
+  background: darkslategrey url(${({ imageSrc }) => imageSrc}) no-repeat center
+    top;
   background-size: cover;
 `
 
@@ -21,7 +22,7 @@ const Title = styled.div`
   position: absolute;
   text-align: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0.7em 0;
   bottom: 0;
   color: whitesmoke;

@@ -14,7 +14,9 @@ function* handleSearch(action: AppAction) {
     if (res.Error) {
       yield put(searchError(res.Error))
     } else if (res.Search.length === 0) {
-      yield put(searchError('There are no movies found. Try another search request.'))
+      yield put(
+        searchError('There are no movies found. Try another search request.')
+      )
     } else {
       yield put(searchSuccess(res.Search))
     }

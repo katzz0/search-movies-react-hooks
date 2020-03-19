@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from './layout/Header'
-import MoviesPage from './movies/MoviesPage';
+import MoviesPage from './movies/MoviesPage'
 
 const Wrapper = styled.div`
   height: 100vh;

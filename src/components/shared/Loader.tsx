@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 const wiggle = keyframes`
   0% {
@@ -11,14 +11,14 @@ const wiggle = keyframes`
     top: 24px;
     height: 32px;
   }
-`;
+`
 
 const Wrapper = styled.div`
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
-  
+
   & > div {
     display: inline-block;
     position: absolute;
@@ -27,17 +27,17 @@ const Wrapper = styled.div`
     background: deepskyblue;
     animation: ${wiggle} 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
-  
+
   & > div:nth-child(1) {
     left: 8px;
     animation-delay: -0.24s;
   }
-  
+
   & > div:nth-child(2) {
     left: 32px;
     animation-delay: -0.12s;
   }
-  
+
   & > div:nth-child(3) {
     left: 56px;
     animation-delay: 0s;
@@ -47,9 +47,9 @@ const Wrapper = styled.div`
 export default function Loader() {
   return (
     <Wrapper>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
     </Wrapper>
   )
 }
