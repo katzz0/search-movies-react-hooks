@@ -17,14 +17,9 @@ const SearchMoviesFieldWithMargin = styled(SearchMoviesField)`
   flex: 0 0 auto;
 `
 
-const FullHeightSearchMoviesResult = styled(SearchMoviesResult)<{
-  occupySpace: boolean
-  transparent: boolean
-}>`
+const FullHeightSearchMoviesResult = styled(SearchMoviesResult)`
   margin: 0 2% 2%;
-  flex: ${({ occupySpace }) => (occupySpace ? '1' : '0')};
-  opacity: ${({ transparent }) => (transparent ? '1' : '0')};
-  transition: flex 100ms ease-in-out, opacity 100ms linear;
+  flex: 1;
 `
 
 const LoaderWrapper = styled.div`
@@ -38,33 +33,25 @@ const LoaderWrapper = styled.div`
 
 interface Props {
   moviesAreLoading: boolean
-  hasData: boolean
 }
 
-function MoviesPage({ moviesAreLoading, hasData }: Props) {
+function MoviesPage({ moviesAreLoading }: Props) {
   const loader = (
     <LoaderWrapper>
       <Loader />
     </LoaderWrapper>
   )
-  const movies = (
-    <FullHeightSearchMoviesResult
-      occupySpace={hasData}
-      transparent={!moviesAreLoading}
-    />
-  )
 
   return (
     <FullHeightMainContent>
       <SearchMoviesFieldWithMargin placeholder="Enter Movies or Series name" />
-      {moviesAreLoading ? loader : movies}
+      {moviesAreLoading ? loader : <FullHeightSearchMoviesResult />}
     </FullHeightMainContent>
   )
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
   moviesAreLoading: state.movies.loading,
-  hasData: !!state.movies.data
 })
 
 export default connect(mapStateToProps)(MoviesPage)
