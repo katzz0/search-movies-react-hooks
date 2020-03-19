@@ -11,6 +11,7 @@ export default createGlobalStyle`
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     background-color: black;
+    color: white;
     
     > * {
       height: 100%;
