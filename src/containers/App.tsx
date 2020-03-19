@@ -20,6 +20,7 @@ const SearchMoviesFieldWithMargin = styled(SearchMoviesField)`
 `
 
 const FullHeightSearchMoviesResult = styled(SearchMoviesResult)`
+  margin: 1em 2% 0 2%;
   flex: 1;
 `
 

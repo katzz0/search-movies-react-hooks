@@ -8,9 +8,11 @@ interface Props<T, I> {
 }
 
 const ContentWrapper = styled.ul`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 250px;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
   margin: 0;
   padding: 0.1em;
   list-style: none;
