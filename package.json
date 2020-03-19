@@ -1,6 +1,7 @@
 {
   "name": "search-movies-react-hooks",
   "version": "0.1.0",
+  "homepage": "http://mpalenov.github.io/search-movies-react-hooks",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,6 +17,8 @@
     "typesafe-actions": "^5.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,17 +46,18 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.29",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
     "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
     "@types/styled-components": "^5.0.1",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
     "babel-plugin-styled-components": "^1.10.7",
     "eslint-config-blvd": "^1.0.2",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.5"
   }
