@@ -10,7 +10,6 @@ interface Props<T, I> {
 const ContentWrapper = styled.ul`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 250px;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   margin: 0;

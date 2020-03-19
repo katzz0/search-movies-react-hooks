@@ -6,18 +6,15 @@ const Wrapper = styled.div`
   height: 100%;
 `
 
-const Poster = styled.figure`
+const Poster = styled.div<{ imageSrc: string }>`
   position: relative;
   margin: 0;
   border-radius: 4px;
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
-
-const PosterImage = styled.img`
-  opacity: .9;
-  width: 100%;
+  background: url(${ ({ imageSrc }) => imageSrc }) no-repeat center top;
+  background-size: cover;
 `
 
 const Title = styled.span`
@@ -36,8 +33,7 @@ interface Props {
 export default function Movie({ movie }: Props) {
   return (
     <Wrapper>
-      <Poster>
-        <PosterImage src={movie.Poster} alt={movie.Title} />
+      <Poster imageSrc={movie.Poster}>
         <Title>{movie.Title}, {movie.Year}</Title>
       </Poster>
     </Wrapper>

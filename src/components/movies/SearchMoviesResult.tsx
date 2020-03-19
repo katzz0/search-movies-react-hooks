@@ -1,14 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import List from '../shared/List'
 import { Movie as MovieModel } from '../../store/movies/types'
-import MovieCard from './MovieCard'
 import { ApplicationState } from '../../store'
 import ErrorMessageWrapper from '../shared/ErrorMessageWrapper'
+import MoviesList from './MoviesList';
 
 type MovieModelWithId = MovieModel & { id: string }
 
-interface Props {
+interface Props{
   className?: string
   movies: MovieModelWithId[]
   errorMessage?: string
@@ -23,7 +22,7 @@ function SearchMoviesResult<T>({ className, movies, errorMessage }: Props) {
     )
   }
 
-  return <List className={className} itemComponent={MovieCard} data={movies} />
+  return <MoviesList className={className} movies={movies} />
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
