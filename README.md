@@ -32,4 +32,4 @@ official [web site](http://www.omdbapi.com/). To set that key set an environment
 in Bash like that `export REACT_APP_API_KEY="{YOUR_KEY}"`.
 
 ## License
-OMDB React client is licensed under the MIT License - see the LICENSE file for details
+OMDB React client is licensed under the MIT License - see the LICENSE file for details.
