@@ -5,6 +5,7 @@ import SearchMoviesField from './SearchMoviesField';
 import SearchMoviesResult from './SearchMoviesResult';
 import { ApplicationState } from '../../store';
 import { connect } from 'react-redux';
+import Loader from '../shared/Loader';
 
 const FullHeightMainContent = styled(MainContent)`
   flex: 1;
@@ -23,31 +24,46 @@ const FullHeightSearchMoviesResult = styled(SearchMoviesResult)<{ occupySpace: b
   transition: flex 100ms ease-in-out, opacity 100ms linear;
 `
 
+const LoaderWrapper = styled.div`
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 interface Props {
   moviesAreLoading: boolean
 }
 
 function MoviesPage({ moviesAreLoading }: Props) {
-  const [hasRequested, setHasRequested] = useState(false)
+  const [dataRequestedFirstTime, setDataRequestedFirstTime] = useState(false)
+  const [dataFetchedFirstTime, setDataFetchedFirstTime] = useState(false)
 
   useEffect(() => {
-    if (!moviesAreLoading) {
+    if (!moviesAreLoading && dataRequestedFirstTime) {
+      setDataFetchedFirstTime(true)
+
       return;
     }
 
-    setHasRequested(true)
+    setDataRequestedFirstTime(true);
   }, [moviesAreLoading])
+
+  const loader = <LoaderWrapper><Loader/></LoaderWrapper>
+  const movies = <FullHeightSearchMoviesResult occupySpace={dataFetchedFirstTime} transparent={!moviesAreLoading} />
 
   return (
     <FullHeightMainContent>
       <SearchMoviesFieldWithMargin placeholder="Enter Movies or Series name" />
-      <FullHeightSearchMoviesResult occupySpace={hasRequested} transparent={!moviesAreLoading} />
+      { moviesAreLoading ? loader : movies }
     </FullHeightMainContent>
   )
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
-  moviesAreLoading: state.movies.loading
+  moviesAreLoading: state.movies.loading,
 })
 
 export default connect(mapStateToProps)(MoviesPage)
