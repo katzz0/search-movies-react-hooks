@@ -16,11 +16,12 @@ const FullHeightMainContent = styled(MainContent)`
 `
 
 const SearchMoviesFieldWithMargin = styled(SearchMoviesField)`
+  margin: 1em;
   padding: 0.5em 0;
 `
 
 const FullHeightSearchMoviesResult = styled(SearchMoviesResult)`
-  margin: 1em 2% 0 2%;
+  margin: 0 2% 2%;
   flex: 1;
 `
 
