@@ -13,7 +13,7 @@ interface Props {
 
 export default function MainContent({
   className,
-  children
+  children,
 }: PropsWithChildren<Props>) {
   return <Wrapper className={className}>{children}</Wrapper>
 }

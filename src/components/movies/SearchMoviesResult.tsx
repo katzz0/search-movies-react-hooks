@@ -29,9 +29,14 @@ function SearchMoviesResult<T>({ className, movies, errorMessage }: Props) {
   return null
 }
 
+SearchMoviesResult.defaultProps = {
+  className: undefined,
+  errorMessage: undefined,
+}
+
 const mapStateToProps = (state: ApplicationState) => ({
-  movies: state.movies.data?.map(x => ({ id: x.imdbID, ...x })),
-  errorMessage: state.movies.error
+  movies: state.movies.data?.map((x) => ({ id: x.imdbID, ...x })),
+  errorMessage: state.movies.error,
 })
 
 export default connect(mapStateToProps)(SearchMoviesResult)

@@ -4,7 +4,7 @@ import { MoviesState, MoviesActionTypes } from './types'
 export const initialState: MoviesState = {
   data: undefined,
   error: undefined,
-  loading: false
+  loading: false,
 }
 
 const reducer: Reducer<MoviesState> = (state = initialState, action) => {
@@ -17,7 +17,7 @@ const reducer: Reducer<MoviesState> = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
-        error: undefined
+        error: undefined,
       }
     }
     case MoviesActionTypes.SEARCH_ERROR: {

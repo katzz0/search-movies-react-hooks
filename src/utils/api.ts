@@ -9,14 +9,14 @@ function prepareUrl(baseUrl: string, ...params: string[]): string {
 async function callApi<T>(
   method: string,
   url: string,
-  data?: object | string | number | boolean
+  data?: Record<string, unknown> | string | number | boolean
 ): Promise<T> {
   const res = await fetch(url, {
     method,
     headers: {
-      Accept: 'application/json'
+      Accept: 'application/json',
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
 
   return res.json()

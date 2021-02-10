@@ -41,11 +41,7 @@ const Input = styled.input`
   }
 `
 
-export default function SearchField({
-  className,
-  searchRequest,
-  placeholder
-}: Props) {
+function SearchField({ className, searchRequest, placeholder }: Props) {
   const [searchText, setSearchText] = useState('')
 
   const isInputValid = () => {
@@ -68,9 +64,16 @@ export default function SearchField({
         type="text"
         placeholder={placeholder}
         value={searchText}
-        onChange={e => setSearchText(e.target.value)}
+        onChange={(e) => setSearchText(e.target.value)}
       />
       <Button disabled={!isInputValid()}>Search</Button>
     </Form>
   )
 }
+
+SearchField.defaultProps = {
+  className: undefined,
+  placeholder: undefined,
+}
+
+export default SearchField

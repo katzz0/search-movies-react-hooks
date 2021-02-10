@@ -15,6 +15,10 @@ function MoviesList({ className, movies }: Props) {
   return <List className={className} itemComponent={MovieCard} data={movies} />
 }
 
+MoviesList.defaultProps = {
+  className: undefined,
+}
+
 export default styled(MoviesList)`
   grid-auto-rows: 250px;
 `

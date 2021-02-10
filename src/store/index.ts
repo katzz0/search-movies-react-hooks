@@ -11,7 +11,7 @@ export interface ApplicationState {
 
 export const createRootReducer = () =>
   combineReducers({
-    movies: moviesReducer
+    movies: moviesReducer,
   })
 
 export function* rootSaga() {

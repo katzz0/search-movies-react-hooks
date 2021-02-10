@@ -17,16 +17,22 @@ const ContentWrapper = styled.ul`
   list-style: none;
 `
 
-export default function List<T, I extends T & { id: string }>({
+function List<T, I extends T & { id: string }>({
   className,
   itemComponent,
-  data
+  data,
 }: Props<T, I>) {
   return (
     <ContentWrapper className={className}>
-      {data.map(x => (
+      {data.map((x) => (
         <li key={x.id}>{React.createElement(itemComponent, { item: x })}</li>
       ))}
     </ContentWrapper>
   )
 }
+
+List.defaultProps = {
+  className: undefined,
+}
+
+export default List
