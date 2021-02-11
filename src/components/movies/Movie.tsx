@@ -32,7 +32,7 @@ interface Props {
   movie: MovieModel
 }
 
-export default function Movie({ movie }: Props) {
+export default function Movie({ movie }: Props): JSX.Element {
   return (
     <Wrapper>
       <Poster imageSrc={movie.Poster}>

@@ -26,7 +26,7 @@ const Title = styled.h2`
   font-weight: 500;
 `
 
-export default function Header({ appName }: Props) {
+export default function Header({ appName }: Props): JSX.Element {
   return (
     <Wrapper>
       <HeaderInner>

@@ -14,6 +14,6 @@ interface Props {
 export default function MainContent({
   className,
   children,
-}: PropsWithChildren<Props>) {
+}: PropsWithChildren<Props>): JSX.Element {
   return <Wrapper className={className}>{children}</Wrapper>
 }

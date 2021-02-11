@@ -1,4 +1,11 @@
-import { all, call, fork, put, takeEvery } from 'redux-saga/effects'
+import {
+  all,
+  call,
+  fork,
+  put,
+  StrictEffect,
+  takeEvery,
+} from 'redux-saga/effects'
 import { searchError, searchSuccess } from './actions'
 import { makeGetRequest } from '../../utils/api'
 import { MoviesActionTypes, SearchMoviesResult } from './types'
@@ -33,7 +40,7 @@ function* watchFetchRequest() {
   yield takeEvery(MoviesActionTypes.SEARCH_REQUEST, handleSearch)
 }
 
-function* moviesSaga() {
+function* moviesSaga(): Generator<StrictEffect, void, void> {
   yield all([fork(watchFetchRequest)])
 }
 

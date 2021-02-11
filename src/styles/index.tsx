@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Normalize } from './normalize'
 import CustomGlobalStyle from './global'
 
-export default function GlobalStyle() {
+export default function GlobalStyle(): JSX.Element {
   return (
     <>
       <Normalize />

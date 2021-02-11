@@ -6,6 +6,6 @@ interface Props {
   item: MovieModel
 }
 
-export default function MovieCard({ item }: Props) {
+export default function MovieCard({ item }: Props): JSX.Element {
   return <Movie movie={item} />
 }

@@ -41,7 +41,11 @@ const Input = styled.input`
   }
 `
 
-function SearchField({ className, searchRequest, placeholder }: Props) {
+function SearchField({
+  className,
+  searchRequest,
+  placeholder,
+}: Props): JSX.Element {
   const [searchText, setSearchText] = useState('')
 
   const isInputValid = () => {

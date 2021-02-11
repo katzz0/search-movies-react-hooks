@@ -13,7 +13,7 @@ interface Props {
   errorMessage?: string
 }
 
-function SearchMoviesResult<T>({ className, movies, errorMessage }: Props) {
+function SearchMoviesResult({ className, movies, errorMessage }: Props) {
   if (errorMessage) {
     return (
       <ErrorMessageWrapper className={className}>

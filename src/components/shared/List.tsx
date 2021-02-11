@@ -21,7 +21,7 @@ function List<T, I extends T & { id: string }>({
   className,
   itemComponent,
   data,
-}: Props<T, I>) {
+}: Props<T, I>): JSX.Element {
   return (
     <ContentWrapper className={className}>
       {data.map((x) => (

@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import { all, fork } from 'redux-saga/effects'
+import { combineReducers, Reducer } from 'redux'
+import { all, fork, StrictEffect } from 'redux-saga/effects'
 
 import moviesSaga from './movies/sagas'
 import { MoviesState } from './movies/types/state'
@@ -9,11 +9,11 @@ export interface ApplicationState {
   movies: MoviesState
 }
 
-export const createRootReducer = () =>
+export const createRootReducer: () => Reducer<ApplicationState> = () =>
   combineReducers({
     movies: moviesReducer,
   })
 
-export function* rootSaga() {
+export function* rootSaga(): Generator<StrictEffect, void, void> {
   yield all([fork(moviesSaga)])
 }

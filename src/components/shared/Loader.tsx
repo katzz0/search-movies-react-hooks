@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   }
 `
 
-export default function Loader() {
+export default function Loader(): JSX.Element {
   return (
     <Wrapper>
       <div />

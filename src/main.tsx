@@ -9,7 +9,7 @@ interface MainProps {
   store: Store<ApplicationState>
 }
 
-function Main({ store }: MainProps) {
+function Main({ store }: MainProps): JSX.Element {
   return (
     <Provider store={store}>
       <GlobalStyle />
