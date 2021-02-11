@@ -1,7 +1,7 @@
 {
   "homepage": "http://mpalenov.github.io/search-movies-react-hooks",
   "name": "search-movies-react-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
