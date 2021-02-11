@@ -26,6 +26,8 @@
     "jest/globals": true
   },
   "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/setupTests.ts", "**/*.test.ts", "**/*.test.tsx"]}],
     "import/prefer-default-export": ["off"],
     "@typescript-eslint/explicit-function-return-type": ["off"],

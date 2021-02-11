@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { Movie as MovieModel } from '../../store/movies/types'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import { Movie as MovieModel } from '../../store/movies/types'
 import { ApplicationState } from '../../store'
