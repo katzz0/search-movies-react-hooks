@@ -1,6 +1,14 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["blvd/react", "prettier", "prettier/@typescript-eslint", "prettier/react", "plugin:prettier/recommended"],
+  "extends": [
+    "blvd/react",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "react-app",
+    "react-app/jest"
+  ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
