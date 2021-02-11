@@ -23,12 +23,6 @@ jobs:
       - name: Lint 🔍
         run: npm run lint
       
-      - name: Print key
-        run: echo "$REACT_APP_API_KEY"
-
-      - name: Print envs
-        run: env
-      
       - name: Build 🏗️
         run: npm run build
       
