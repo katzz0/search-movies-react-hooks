@@ -11,13 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
 
-      - name: Install deps
+      - name: Install deps 🔧
         run: npm ci
 
-      - name: Lint
+      - name: Lint 🔍
         run: npm run lint
       
-      - name: Build
+      - name: Build 🏗️
         run: npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages
+          folder: build
