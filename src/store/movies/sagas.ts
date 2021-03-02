@@ -1,10 +1,11 @@
 import {
   all,
   call,
+  cancelled,
   fork,
   put,
   StrictEffect,
-  takeEvery,
+  takeLatest,
 } from 'redux-saga/effects'
 import { searchError, searchSuccess } from './actions'
 import { makeGetRequest } from '../../utils/api'
@@ -12,9 +13,12 @@ import { MoviesActionTypes, SearchMoviesResult } from './types'
 import { AppAction } from '../../utils/appAction'
 
 function* handleSearch(action: AppAction) {
+  const abortController = new AbortController()
+
   try {
     const res: SearchMoviesResult = yield call(
       makeGetRequest,
+      abortController.signal,
       `s=${action.payload}`
     )
 
@@ -33,11 +37,15 @@ function* handleSearch(action: AppAction) {
     } else {
       yield put(searchError('An unknown error occurred'))
     }
+  } finally {
+    if (yield cancelled()) {
+      abortController.abort()
+    }
   }
 }
 
 function* watchFetchRequest() {
-  yield takeEvery(MoviesActionTypes.SEARCH_REQUEST, handleSearch)
+  yield takeLatest(MoviesActionTypes.SEARCH_REQUEST, handleSearch)
 }
 
 function* moviesSaga(): Generator<StrictEffect, void, void> {

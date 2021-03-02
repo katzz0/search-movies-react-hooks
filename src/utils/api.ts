@@ -9,7 +9,8 @@ function prepareUrl(baseUrl: string, ...params: string[]): string {
 async function callApi<T>(
   method: string,
   url: string,
-  data?: Record<string, unknown> | string | number | boolean
+  data?: Record<string, unknown> | string | number | boolean,
+  signal?: AbortSignal
 ): Promise<T> {
   const res = await fetch(url, {
     method,
@@ -17,13 +18,17 @@ async function callApi<T>(
       Accept: 'application/json',
     },
     body: JSON.stringify(data),
+    signal,
   })
 
   return res.json()
 }
 
-export function makeGetRequest<T>(...params: string[]): Promise<T> {
+export function makeGetRequest<T>(
+  signal: AbortSignal,
+  ...params: string[]
+): Promise<T> {
   const url = prepareUrl(API_ENDPOINT, `apiKey=${API_KEY}`, ...params)
 
-  return callApi('get', url)
+  return callApi('get', url, undefined, signal)
 }
